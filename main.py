@@ -1,49 +1,23 @@
 # ШАГ. Д/з по сроку 07/08/2023 © Денис Заливко
 
-class Method:
+from string import String
+from list import List
 
-    def __init__(self, obj):
-        """
-        Инициализирует класс
-        :param obj: Объект, с которым необходимо работать
-        """
-        self._obj = obj
-
-    def length(self) -> int:
-        """
-        Возвращает длину (размерность) объекта
-        :return: Длина/размерность объекта класса
-        """
-        ...
-
-    def is_include(self, find_obj: object) -> bool:
-        """
-        Проверяет вхождение/членство элемента
-        :param find_obj: Элемент, на который проверяется вхождение/членство
-        :return: True, если find_obj входит (является членом) объекта класса
-        """
-        ...
+my_str = String("Hellow world! I'm Denis!")
+print(my_str)
+print(my_str.is_include('world!'))
+my_str.replace('Denis', 'Alexandr')
+print(my_str)
 
 
-class String(Method):
-
-    def length(self) -> int:
-        ...
-
-    def is_include(self, sub_str: str) -> bool:
-        ...
-
-    def replace(self, old: str, new: str) -> None:
-        ...
+my_str.replace('Alexandr', 'Denis')
+my_list = List(str(my_str).split())
+print(my_list)
+print(my_list.is_include('Denis!'))
+my_list.add('STEP')
+print(my_list)
+print(f'List length = {my_list.length()}')
 
 
-class List(Method):
 
-    def length(self) -> int:
-        ...
 
-    def is_include(self, find_obj: object) -> bool:
-        ...
-
-    def add(self, new_item: object) -> None:
-        ...
